@@ -1,0 +1,166 @@
+[
+    {
+        "id":1,
+        "detail":"T-shirt",
+        "image":"/images/t-shirt.jpg",
+        "name":"T-shirts with Tape Details",
+        "star":"/images/fourStar.png",
+        "starDetail":"4.5/5",
+        "originalPrice":"$120",
+        "discountPrice":null,
+        "discountPercentage":null,
+        "description":"This graphic t-shirt which is perfect for any occasion. Crafted from a soft andbreathable fabric, it offers superior comfort and style."
+    },
+    {
+        "id":2,
+        "detail":"Jeans",
+        "image":"/images/jeans.jpg",
+        "name":"Skiny fit jeans",
+        "star":"/images/threePoint.png",
+        "starDetail":"3.5/5",
+        "originalPrice":"$260",
+        "discountPrice":240,
+        "discountPercentage":"-20%",
+        "description":"This graphic t-shirt which is perfect for any occasion. Crafted from a soft andbreathable fabric, it offers superior comfort and style."
+    },
+    {
+        "id":3,
+        "detail":"T-shirt",
+        "image":"/images/checkered.jpg",
+        "name":"Checkered Shirt",
+        "star":"/images/fourStar.png",
+        "starDetail":"4.5/5",
+        "originalPrice":"$180",
+        "discountPrice":null,
+        "discountPercentage":null,
+        "description":"This graphic t-shirt which is perfect for any occasion. Crafted from a soft andbreathable fabric, it offers superior comfort and style."
+    },
+    
+    
+    {
+        "id":4,
+        "detail":"Shirt",
+        "image":"/images/stripedTshirt.jpg",
+        "name":"Slevee Striped T-shirt",
+        "star":"/images/fourStar.png",
+        "starDetail":"4.5/5",
+        "originalPrice":"$160",
+        "discountPrice":130,
+        "discountPercentage":"-30%",
+        "description":"This graphic t-shirt which is perfect for any occasion. Crafted from a soft andbreathable fabric, it offers superior comfort and style."
+    },
+
+    {
+        "id":5,
+        "detail":"T-shirt",
+        "image":"/images/t-shirt.jpg",
+        "name":"T-shirts with Tape Details",
+        "star":"/images/fourStar.png",
+        "starDetail":"4.5/5",
+        "originalPrice":"$120",
+        "discountPrice":null,
+        "discountPercentage":null,
+        "description":"This graphic t-shirt which is perfect for any occasion. Crafted from a soft andbreathable fabric, it offers superior comfort and style."
+    },
+    {
+        "id":6,
+        "detail":"Jeans",
+        "image":"/images/jeans.jpg",
+        "name":"Skiny fit jeans",
+        "star":"/images/threePoint.png",
+        "starDetail":"3.5/5",
+        "originalPrice":"$260",
+        "discountPrice":240,
+        "discountPercentage":"-20%",
+        "description":"This graphic t-shirt which is perfect for any occasion. Crafted from a soft andbreathable fabric, it offers superior comfort and style."
+    },
+    {
+        "id":7,
+        "detail":"T-shirt",
+        "image":"/images/checkered.jpg",
+        "name":"Checkered Shirt",
+        "star":"/images/fourStar.png",
+        "starDetail":"4.5/5",
+        "originalPrice":"$180",
+        "discountPrice":null,
+        "discountPercentage":null,
+        "description":"This graphic t-shirt which is perfect for any occasion. Crafted from a soft andbreathable fabric, it offers superior comfort and style."
+    },
+    
+    
+    {
+        "id":8,
+        "detail":"T-shirt",
+        "image":"/images/stripedTshirt.jpg",
+        "name":"Slevee Striped T-shirt",
+        "star":"/images/fourStar.png",
+        "starDetail":"4.5/5",
+        "originalPrice":"$160",
+        "discountPrice":130,
+        "discountPercentage":"-30%",
+        "description":"This graphic t-shirt which is perfect for any occasion. Crafted from a soft andbreathable fabric, it offers superior comfort and style."
+    },
+
+    {
+        "id":9,
+        "detail":"T-shirt",
+        "image":"/images/t-shirt.jpg",
+        "name":"T-shirts with Tape Details",
+        "star":"/images/fourStar.png",
+        "starDetail":"4.5/5",
+        "originalPrice":"$120",
+        "discountPrice":null,
+        "discountPercentage":null,
+        "description":"This graphic t-shirt which is perfect for any occasion. Crafted from a soft andbreathable fabric, it offers superior comfort and style."
+    },
+    {
+        "id":10,
+        "detail":"Jeans",
+        "image":"/images/jeans.jpg",
+        "name":"Skiny fit jeans",
+        "star":"/images/threePoint.png",
+        "starDetail":"3.5/5",
+        "originalPrice":"$260",
+        "discountPrice":240,
+        "discountPercentage":"-20%",
+        "description":"This graphic t-shirt which is perfect for any occasion. Crafted from a soft andbreathable fabric, it offers superior comfort and style."
+    },
+    {
+        "id":11,
+        "detail":"T-shirt",
+        "image":"/images/checkered.jpg",
+        "name":"Checkered Shirt",
+        "star":"/images/fourStar.png",
+        "starDetail":"4.5/5",
+        "originalPrice":"$180",
+        "discountPrice":null,
+        "discountPercentage":null,
+        "description":"This graphic t-shirt which is perfect for any occasion. Crafted from a soft andbreathable fabric, it offers superior comfort and style."
+    },
+    
+    
+    {
+        "id":12,
+        "detail":"T-shirt",
+        "image":"/images/stripedTshirt.jpg",
+        "name":"Slevee Striped T-shirt",
+        "star":"/images/fourStar.png",
+        "starDetail":"4.5/5",
+        "originalPrice":"$160",
+        "discountPrice":130,
+        "discountPercentage":"-30%",
+        "description":"This graphic t-shirt which is perfect for any occasion. Crafted from a soft andbreathable fabric, it offers superior comfort and style."
+    },
+    {
+        "id":13,
+        "detail":"Gym combo",
+        "image":"/images/gym.png",
+        "name":"Gym combo",
+        "star":"/images/fourStar.png",
+        "starDetail":"4.5/5",
+        "originalPrice":"$260",
+        "discountPrice":130,
+        "discountPercentage":"-30%",
+        "description":"This graphic t-shirt which is perfect for any occasion. Crafted from a soft andbreathable fabric, it offers superior comfort and style."
+    }
+]

@@ -1,0 +1,136 @@
+[
+    {
+        "id":1,
+        "image":"/images/verticalShirt.jpg",
+        "detail":"T-shirt",
+        "name":"Vertical Striped T-shirt",
+        "star":"/images/five.png",
+        "starDetail":"5/5",
+        "originalPrice":"$232",
+        "discountPrice":212,
+        "discountPercentage":"-20%"
+    },
+    {
+        "id":2,
+        "image":"/images/courageShirt.jpg",
+        "detail":"T-shirt",
+        "name":"Courage Graphic T-shirt",
+        "star":"/images/four.png",
+        "starDetail":"4/5",
+        "originalPrice":"$145",
+        "discountPrice":null,
+        "discountPercentage":null
+    },
+    {
+        "id":3,
+        "image":"/images/loseFit.jpg",
+        "detail":"Sorts",
+        "name":"Lose Fit Bermuda Sorts",
+        "star":"/images/three.png",
+        "starDetail":"3/5",
+        "originalPrice":"$80",
+        "discountPrice":24,
+        "discountPercentage":"-30%"
+    },
+    {
+        "id":4,
+        "image":"/images/fadedjeans.jpg",
+        "detail":"Jeans",
+        "name":"Faded Skiny Jeans",
+        "star":"/images/fourStar.png",
+        "starDetail":"4.5/5",
+        "originalPrice":"$210",
+        "discountPrice":null,
+        "discountPercentage":null
+    },
+
+    {
+        "id":5,
+        "image":"/images/verticalShirt.jpg",
+        "detail":"T-shirt",
+        "name":"Vertical Striped T-shirt",
+        "star":"/images/five.png",
+        "starDetail":"5/5",
+        "originalPrice":"$232",
+        "discountPrice":212,
+        "discountPercentage":"-20%"
+    },
+    {
+        "id":6,
+        "image":"/images/courageShirt.jpg",
+        "detail":"T-shirt",
+        "name":"Courage Graphic T-shirt",
+        "star":"/images/four.png",
+        "starDetail":"4/5",
+        "originalPrice":"$145",
+        "discountPrice":null,
+        "discountPercentage":null
+    },
+    {
+        "id":7,
+        "image":"/images/loseFit.jpg",
+        "detail":"Sorts",
+        "name":"Lose Fit Bermuda Sorts",
+        "star":"/images/three.png",
+        "starDetail":"3/5",
+        "originalPrice":"$80",
+        "discountPrice":24,
+        "discountPercentage":"-30%"
+    },
+    {
+        "id":8,
+        "image":"/images/fadedjeans.jpg",
+        "detail":"Jeans",
+        "name":"Faded Skiny Jeans",
+        "star":"/images/fourStar.png",
+        "starDetail":"4.5/5",
+        "originalPrice":"$210",
+        "discountPrice":null,
+        "discountPercentage":null
+    },
+
+    {
+        "id":9,
+        "image":"/images/verticalShirt.jpg",
+        "detail":"T-shirt",
+        "name":"Vertical Striped T-shirt",
+        "star":"/images/five.png",
+        "starDetail":"5/5",
+        "originalPrice":"$232",
+        "discountPrice":212,
+        "discountPercentage":"-20%"
+    },
+    {
+        "id":10,
+        "image":"/images/courageShirt.jpg",
+        "detail":"T-shirt",
+        "name":"Courage Graphic T-shirt",
+        "star":"/images/four.png",
+        "starDetail":"4/5",
+        "originalPrice":"$145",
+        "discountPrice":null,
+        "discountPercentage":null
+    },
+    {
+        "id":11,
+        "image":"/images/loseFit.jpg",
+        "detail":"Sorts",
+        "name":"Lose Fit Bermuda Sorts",
+        "star":"/images/three.png",
+        "starDetail":"3/5",
+        "originalPrice":"$80",
+        "discountPrice":null,
+        "discountPercentage":null
+    },
+    {
+        "id":12,
+        "image":"/images/fadedjeans.jpg",
+        "detail":"Jeans",
+        "name":"Faded Skiny Jeans",
+        "star":"/images/fourStar.png",
+        "starDetail":"4.5/5",
+        "originalPrice":"$210",
+        "discountPrice":null,
+        "discountPercentage":null
+    }
+]
