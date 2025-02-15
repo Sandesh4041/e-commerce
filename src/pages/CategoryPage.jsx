@@ -113,13 +113,13 @@ const CategoryPage = () => {
       siz: size,
     });
   }, [size, selectedColor]);
-  console.log(filterData);
+  // console.log(filterData);
   return (
     <div>
       <Nav />
       <div className="pt-[110px]  nine:pt-[100px]">
         <div className="w-[95%] nine:w-[90%] mx-auto">
-          <h1 className="inline">Home</h1>
+          <h1 className="inline cursor-pointer" onClick={()=>navigate('/')}>Home</h1>
           <img src={next} alt="next" className="inline ml-[5px]" />
           <h1 className="inline ml-[5px] font-bold">{name}</h1>
 

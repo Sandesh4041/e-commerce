@@ -1,5 +1,5 @@
 import React, {  useEffect, useState } from 'react';
-import { useLocation } from 'react-router';
+import { useLocation, useNavigate } from 'react-router';
 import Nav from '../component/Nav';
 import Footer from '../component/Footer';
 import next from '../images/next.png';
@@ -17,6 +17,7 @@ import { addTocart } from '../features/counter/counterSlice';
 const ProductDetail = () => {
     const dispatch=useDispatch()
    
+    const navigate=useNavigate();
 
 
     const[choosenColor,setChoosenColor]=useState()
@@ -35,7 +36,8 @@ const ProductDetail = () => {
         'itemPrice':item.originalPrice,
         'itemColor':choosenColor,
         'itemSize':selectedSize,
-        'itemTotal':value
+        'itemTotal':value,
+        'subTotal':parseInt(item.originalPrice.replace("$","",10))*value
         
     })
 
@@ -45,7 +47,7 @@ const ProductDetail = () => {
             return
         }
         dispatch(addTocart(cart))
-        console.log(cart)
+        // console.log(cart)
         alert("Product Added Successfully,Have A Good Day!")
     }
 useEffect(()=>{
@@ -56,7 +58,8 @@ setCart({
         'itemPrice':item.originalPrice,
         'itemColor':choosenColor,
         'itemSize':selectedSize,
-        'itemTotal':value
+        'itemTotal':value,
+        'subTotal':parseInt(item.originalPrice.replace("$","",10))*value
 })
 },[choosenColor,selectedSize,value,item])
 
@@ -100,8 +103,8 @@ if(value>=1){
             <div className='pt-[110px]  nine:pt-[100px]'>
                 <hr className="w-[90%] mx-auto mt-6 border  border-gray-100 " />
                 <div className='pt-2 w-[95%] nine:w-[90%] mx-auto items-center'>
-                    <p className='inline'>Home <img src={next} alt="next" className='inline' /></p>
-                    <p className='inline'>Shop <img src={next} alt="next" className='inline' /></p>
+                    <p className='inline cursor-pointer' onClick={()=>navigate('/')}>Home <img src={next} alt="next" className='inline' /></p>
+                    <p className='inline cursor-pointer' onClick={()=>navigate('/onsales')}>Shop <img src={next} alt="next" className='inline' /></p>
                     <p className='inline'>Men <img src={next} alt="next" className='inline' /></p>
                     <p className='inline font-bold'>{item.detail}</p>
 
@@ -198,7 +201,7 @@ if(value>=1){
                             </div>
                         </div>
                     </div>
-
+             
                 </div>
             </div>
             <div className="mt-[10px]">

@@ -36,7 +36,7 @@ const HappyCustomer = () => {
         if(currentIndex > 0){
             setCurrentIndex((pre)=>pre-1);
             setDirection(-1);
-            console.log("pre");
+            // console.log("pre");
         }
         else{
             alert("You cannot go in previous state instead click next for another review.");
@@ -47,7 +47,7 @@ const HappyCustomer = () => {
         if(currentIndex + visibileCard < message.length){
             setDirection(1);
             setCurrentIndex((pre)=>pre+1);
-            console.log("next");
+            // console.log("next");
         }
         else{
             alert("last review is up to this.")
