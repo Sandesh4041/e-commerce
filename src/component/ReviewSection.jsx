@@ -58,7 +58,7 @@ return(
 <div className='flex flex-wrap justify-start items-center '>
   <h1 className='font-bold'>All Reviews({totalReview})</h1>
   <div className='flex gap-2 items-center ml-auto'>
-    <p className='inline font-bold bg-gray-100 p-4 rounded-full'>Latest 
+    <p className='inline font-bold bg-gray-100 px-3 five:px-6 py-2 five:py-4 rounded-full'>Latest 
       <img src={dropDown} onClick={handlePop} alt="dropDown" className='cursor-pointer ml-[10px] inline' /></p>
     <button className='rounded-full bg-black text-white px-3 five:px-6 py-2 five:py-4' onClick={handlePop}>Write a Review</button>
     <img src={leftArrow} alt="pre" className='ml-[10px]' onClick={handlePrev}  />

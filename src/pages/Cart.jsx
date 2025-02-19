@@ -23,14 +23,16 @@ const Cart = () => {
 //   console.log(cart);
 
   useEffect(()=>{
-setDiscount(0.2*total);
-if(promoText===promoCode){
-    setTotalMoney(total-discount-deliveryFee)
-}
-else{
-    setTotalMoney(total-deliveryFee)
-}
-  },[total,discount,deliveryFee,promoCode,promoText])
+    if(cart.length===0){
+      setDiscount(false);
+    }
+    if(total===0){
+      setDeliveryFee(0)
+    }
+setDiscount(Math.round(0.2*total));
+setTotalMoney(total-deliveryFee);
+
+  },[total,deliveryFee,cart])
 
   const handleDelete = (id) => {
     // console.log(id);
@@ -39,13 +41,16 @@ else{
 
   const handlePromoApply=()=>{
     if(promoText===promoCode){
-        setApplyPromoCode(true);
-        alert("Enjoy 20% discount🥰, Happy coding!🥰🥰")
-    }
-    else{
-        setApplyPromoCode(false);
-        alert("promo code don't match,🤯🤯")
-    }
+      setTotalMoney(total-discount-deliveryFee);
+      setApplyPromoCode(true);
+      alert("Enjoy 20% discount🥰, Happy coding!🥰🥰")
+      setPromoText('')
+  }
+  else{
+      setTotalMoney(total-deliveryFee);
+      setApplyPromoCode(false);
+      alert("promo code don't match,🤯🤯")
+  }
   }
   
 // console.log(promoText)
@@ -64,63 +69,68 @@ else{
         {/* this is about showing the cart div  */}
         <div className="flex flex-col eight:flex-row gap-2  mt-[10px] rounded-lg p-2 w-[95%] nine:w-[90%] mx-auto">
           <div className="w-full ">
-            {cart.map((item, index) => (
-              <>
-                <div
-                  key={index}
-                  className="w-full max-h-[180px] border border-gray-200 rounded-md  p-3 flex  gap-2 "
-                >
-                  <div className="my-auto">
-                    <img
-                      src={item.itemImage}
-                      className="max-w-[80px] six:max-w-[200px] nine:max-w-[240px] 2xl:max-w-[300px] max-h-[100px] six:max-h-[140px] "
-                      alt="testing"
-                    />
-                  </div>
-                  <div className="w-full p-2">
-                    <div className="flex justify-between">
-                      <h1 className="font-bold">{item.itemName}</h1>
+            {
+              cart.length>0?<>{cart.map((item, index) => (
+                <>
+                  <div
+                    key={index}
+                    className="w-full max-h-[180px] border border-gray-200 rounded-md  p-3 flex  gap-2 "
+                  >
+                    <div className="my-auto">
                       <img
-                        src={delte}
-                        alt="delete"
-                        className="cursor-pointer"
-                        onClick={() => handleDelete(item.itemId)}
+                        src={item.itemImage}
+                        className="max-w-[80px] six:max-w-[200px] nine:max-w-[240px] 2xl:max-w-[300px] max-h-[100px] six:max-h-[140px] "
+                        alt="testing"
                       />
                     </div>
-                    <p>
-                      <span className="font-semibold">Size</span>:
-                      {item.itemSize}
-                    </p>
-                    <p>
-                      <span className="font-semibold">Color</span>:
-                      {item.itemColor}
-                    </p>
-
-                    <div className="mt-[10px] flex justify-between gap-2">
-                      <p className="font-bold ">
-                        <span>{item.itemPrice}*{item.itemTotal}=</span>
-                        $
-                        {Number(item.itemPrice.replace(/[^0-9.]/g, "")) *
-                          Number(item.itemTotal)}
+                    <div className="w-full p-2">
+                      <div className="flex justify-between">
+                        <h1 className="font-bold">{item.itemName}</h1>
+                        <img
+                          src={delte}
+                          alt="delete"
+                          className="cursor-pointer"
+                          onClick={() => handleDelete(item.itemId)}
+                        />
+                      </div>
+                      <p>
+                        <span className="font-semibold">Size</span>:
+                        {item.itemSize}
                       </p>
-                      <p className="bg-gray-200 font-bold  rounded-md py-1 px-2 six:px-6">
-                        <span className="mr-[10px] cursor-pointer font-semibold" onClick={()=>dispatch(decreaseCart({id:item.itemId}))}>
-                          -
-                        </span>
-                        {item.itemTotal}
-                        <span
-                          onClick={() =>dispatch(increaseCart({id:item.itemId}))}
-                          className="font-semibold ml-[10px] cursor-pointer"
-                        >
-                          +
-                        </span>
+                      <p>
+                        <span className="font-semibold">Color</span>:
+                        {item.itemColor}
                       </p>
+  
+                      <div className="mt-[10px] flex justify-between gap-2">
+                        <p className="font-bold ">
+                          <span>{item.itemPrice}*{item.itemTotal}=</span>
+                          $
+                          {Number(item.itemPrice.replace(/[^0-9.]/g, "")) *
+                            Number(item.itemTotal)}
+                        </p>
+                        <p className="bg-gray-200 font-bold  rounded-md py-1 px-2 six:px-6">
+                          <span className="mr-[10px] cursor-pointer font-semibold" onClick={()=>dispatch(decreaseCart({id:item.itemId}))}>
+                            -
+                          </span>
+                          {item.itemTotal}
+                          <span
+                            onClick={() =>dispatch(increaseCart({id:item.itemId}))}
+                            className="font-semibold ml-[10px] cursor-pointer"
+                          >
+                            +
+                          </span>
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <hr className="border border-gray-200 my-[5px]" />
-              </>
-            ))}
+                  <hr className="border border-gray-200 my-[5px]" />
+                </>
+              ))}</>:<div className="flex justify-center items-center">
+                <button className="bg-black text-white p-4 rounded-xl" onClick={()=>navigate('/newarrivals')}>Shop Now</button>
+              </div>
+            }
+           
           </div>
           {/* this is about order div  */}
           <div className="w-full p-6 border border-gray-200 rounded-lg h-auto max-h-[300px] overflow-hidden">
@@ -142,7 +152,7 @@ else{
 
               <div className="flex justify-between">
                 <p className="font-semibold">Delivery Fee</p>
-                <p className="font-bold">-${deliveryFee}</p>
+                <p className="font-bold">{deliveryFee===0?'':'-'}${deliveryFee}</p>
               </div>
 
               <hr className="border border-gray-100 my-[10px]" />

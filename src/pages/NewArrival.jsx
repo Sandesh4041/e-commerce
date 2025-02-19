@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import Nav from '../component/Nav';
 import Footer from '../component/Footer';
 import { useNavigate } from 'react-router';
+import { ProductContext } from '../component/ProductContext';
 
 export const NewArrivalCards = () => {
+  const {filterData}=useContext(ProductContext)
   const [product, setProduct] = useState([]);
   const [limit, setLimit] = useState(2); 
   const navigate=useNavigate();
@@ -37,6 +39,7 @@ export const NewArrivalCards = () => {
   // Show only "limit" number of products
   const visibleProduct = product.slice(0, limit);
 
+  // console.log(filterData)
   return (
     <>
       <div className='p-2 mt-4'>

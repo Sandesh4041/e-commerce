@@ -10,14 +10,14 @@ import Gym from './pages/gym';
 import Cart from './pages/Cart';
 import { Provider } from 'react-redux';
 import store from './store';
+import { ProductProvider } from './component/ProductContext';
 
 function App() {
   return (
     <>
+    <ProductProvider>
+ 
     <Provider store={store}>
-
-   
-   
 <BrowserRouter>
 <Routes>
   <Route path='/' index element={<Shop/>}/>
@@ -31,6 +31,8 @@ function App() {
 </Routes>
 </BrowserRouter>
 </Provider>
+     
+</ProductProvider>
    </>
   );
 }
